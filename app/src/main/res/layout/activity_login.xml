@@ -13,7 +13,29 @@
     android:padding="15dp"
     tools:context=".LoginActivity">
 
-    <!-- TextView for heading -->
+
+    <!-- Add Forward and Backward Buttons -->
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forward"
+        tools:ignore="HardcodedText"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="top|end" />
+
+    <Button
+        android:id="@+id/btnBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Backward"
+        tools:ignore="HardcodedText"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="top|start" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

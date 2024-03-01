@@ -23,6 +23,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
 
+    private Button Btn2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -36,6 +38,7 @@ public class RegistrationActivity extends AppCompatActivity {
         emailTextView = findViewById(R.id.email);
         passwordTextView = findViewById(R.id.passwd);
         Btn = findViewById(R.id.btnregister);
+        Btn2 = findViewById(R.id.signin);
         progressbar = findViewById(R.id.progressbar);
 
         // Set on Click Listener on Registration button
@@ -113,5 +116,14 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     }
                 });
+        // Set on Click Listener on Sign In button
+        Btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                // Forward to LoginActivity
+                Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

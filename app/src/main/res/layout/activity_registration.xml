@@ -43,6 +43,15 @@
         android:layout_height="wrap_content"
         android:text="Register"
         tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signin"
+        tools:ignore="HardcodedText" />
+
+
+
 
     <!-- ProgressBar for loading time -->
     <ProgressBar
