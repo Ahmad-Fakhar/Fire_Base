@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         // initialising all views through id defined above
-        TextView forgetfulness = findViewById(R.id.login);
+        TextView forgetfulness = findViewById(R.id.text);
         forgetfulness.setText(
                 "(Firebase Authentication)");
     }

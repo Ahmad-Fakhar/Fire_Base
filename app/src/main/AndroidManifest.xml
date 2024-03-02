@@ -28,13 +28,20 @@
             tools:ignore="IntentFilterExportedReceiver">
         </activity>
 
+
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="IntentFilterExportedReceiver">
+        </activity>
 
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="IntentFilterExportedReceiver">
+        </activity>
+
+
     </application>
 
 </manifest>

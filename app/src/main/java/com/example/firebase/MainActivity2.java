@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import com.example.firebase.RegistrationActivity;
 
 public class MainActivity2 extends AppCompatActivity {
-    private static final int SPLASH_SCREEN_TIME_OUT = 2000; // After completion of 4000 ms, the next activity will get started.
+    private static final int SPLASH_SCREEN_TIME_OUT = 4000; // After completion of 4000 ms, the next activity will get started.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_main); // this will bind your MainActivity.class file with activity_main.
+        setContentView(R.layout.activity_main2); // this will bind your MainActivity.class file with activity_main.
 
         new Handler().postDelayed(new Runnable() {
             @Override

@@ -49,6 +49,16 @@ public class RegistrationActivity extends AppCompatActivity {
                 registerNewUser();
             }
         });
+        // Set on Click Listener on Sign In button
+        Btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                // Forward to LoginActivity
+                Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void registerNewUser()
@@ -61,6 +71,9 @@ public class RegistrationActivity extends AppCompatActivity {
         String email, password;
         email = emailTextView.getText().toString();
         password = passwordTextView.getText().toString();
+
+
+
 
         // Validations for input email and password
         if (TextUtils.isEmpty(email)) {
@@ -78,6 +91,8 @@ public class RegistrationActivity extends AppCompatActivity {
             return;
         }
 
+
+
         // create new user or register new user
         mAuth
                 .createUserWithEmailAndPassword(email, password)
@@ -86,6 +101,10 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task)
                     {
+
+
+
+
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(),
                                             "Registration successful!",
@@ -116,14 +135,5 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     }
                 });
-        // Set on Click Listener on Sign In button
-        Btn2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                // Forward to LoginActivity
-                Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-}
+
+    }}
