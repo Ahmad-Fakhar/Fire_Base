@@ -1,62 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<!-- Linear Layout with vertical orientation and other properties -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="15dp"
-    tools:context=".RegistrationActivity">
+    android:padding="20dp"
+    android:background="@color/white"
+    android:layout_margin="20dp">
 
-    <!-- TextView for heading -->
+    <!-- Title TextView -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        tools:ignore="HardcodedText" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText"
+        android:layout_marginBottom="20dp"/>
 
-    <!-- Edit text for email -->
-    <EditText
-        android:id="@+id/email"
+    <!-- Email EditText -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:hint="Enter your Email"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginBottom="20dp">
 
-    <!-- Edit text for password -->
-    <EditText
-        android:id="@+id/passwd"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:background="@drawable/edit_text_background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password EditText -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="71dp"
-        android:hint="Enter your Password"
-        android:inputType="textPassword"
-        tools:ignore="Autofill,HardcodedText" />
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginBottom="20dp">
 
-    <!-- Button for register with text "Register" -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:background="@drawable/edit_text_background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Register Button -->
     <Button
         android:id="@+id/btnregister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         tools:ignore="HardcodedText" />
+
+    <!-- Sign In Button -->
     <Button
         android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Signin"
+        android:text="Sign In"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         tools:ignore="HardcodedText" />
 
-
-
-
-    <!-- ProgressBar for loading time -->
+    <!-- ProgressBar -->
     <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
 </LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.firebase;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressbar;
 
     private FirebaseAuth mAuth;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -36,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         emailTextView = findViewById(R.id.email);
         passwordTextView = findViewById(R.id.password);
         Btn = findViewById(R.id.login);
-        progressbar = findViewById(R.id.progressBar);
+        progressbar = findViewById(R.id.progressbar);
 
         // Set on Click Listener on Sign-in button
         Btn.setOnClickListener(new View.OnClickListener() {
