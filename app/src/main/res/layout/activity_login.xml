@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="30dp"
     android:background="@color/white"
-    android:layout_margin="20dp">
+    android:gravity="center">
 
     <!-- Title TextView -->
     <TextView
@@ -53,8 +52,6 @@
             android:background="@drawable/edit_text_background" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-
 
     <!-- login In Button -->
     <Button
