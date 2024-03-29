@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@color/white"
-    android:layout_margin="20dp">
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@drawable/background2">
 
     <!-- Title TextView -->
     <TextView
@@ -16,16 +15,18 @@
         android:text="Register"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/cardview_dark_background"
         tools:ignore="HardcodedText"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"/>
 
     <!-- Email EditText -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
-            android:background="@drawable/edit_text_background" />
+            android:background="@color/material_dynamic_primary90" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwd"
@@ -50,7 +52,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:textColor="@color/black"
-            android:background="@drawable/edit_text_background" />
+            android:background="@color/material_dynamic_primary90" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,11 +62,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:background="@color/colorPrimary"
+        android:background="@color/black"
         android:textColor="@color/white"
         android:padding="12dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
         tools:ignore="HardcodedText" />
 
     <!-- Sign In Button -->
@@ -78,6 +81,7 @@
         android:padding="12dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
         tools:ignore="HardcodedText" />
 
     <!-- ProgressBar -->
@@ -86,8 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:indeterminate="true"
-        android:progressDrawable="@drawable/custom_progress_bar" />
+        android:progressDrawable="@drawable/andeoid" />
 
 </LinearLayout>
